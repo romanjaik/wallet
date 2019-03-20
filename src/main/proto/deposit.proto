@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "currency.proto";
+
+option java_multiple_files = true;
+option java_package = "dalobo.grpc.deposit";
+option java_outer_classname = "DepositProto";
+
+package deposit;
+
+message DepositRequest {
+	int64 userId = 1;
+	double amount = 2;
+	Currency currency = 3;
+}
+
+message DepositResponse {
+	string errorMessage = 1;
+}
+
+service Deposit {
+	rpc doDeposit(DepositRequest) returns (DepositResponse) {}
+}

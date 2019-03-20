@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "currency.proto";
+
+option java_multiple_files = true;
+option java_package = "dalobo.grpc.balance";
+option java_outer_classname = "BalanceProto";
+
+package balance;
+
+message BalanceRequest {
+	int64 userId = 1;
+}
+
+message BalanceResponse {
+	repeated BalanceForCurrency balanceForCurrency = 1;
+}
+
+message BalanceForCurrency{
+	Currency currency = 1;
+	double amount = 2;
+}
+
+service Balance {
+	rpc getBalance(BalanceRequest) returns (BalanceResponse) {}
+}

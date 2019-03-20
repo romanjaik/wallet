@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "currency.proto";
+
+option java_multiple_files = true;
+option java_package = "grpc.withdraw";
+option java_outer_classname = "WithdrawProto";
+
+package withdraw;
+
+message WithdrawRequest {
+	int64 userId = 1;
+	double amount = 2;
+	Currency currency = 3;
+}
+
+message WithdrawResponse {
+	string errorMessage = 1;
+}
+
+service Withdraw {
+	rpc withdraw(WithdrawRequest) returns (WithdrawResponse) {}
+}
