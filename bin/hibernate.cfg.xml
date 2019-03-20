@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "-//Hibernate/Hibernate Configuration DTD 3.0//EN">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/wallet</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Drop and re-create all database on startup -->
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+ 
+        <!-- Annotated entity classes -->
+        <mapping class="grpc.hibernate.model.Wallet"/>
+        
+    </session-factory>
+</hibernate-configuration>
