@@ -11,8 +11,7 @@ Technologies used in this project:
 * JUnit
 * SLF4J
 
-Before installing, make sure you have a postgresql running in localhost:5432. Please, set your user/password and database in hibernate.cfg.xml.
-
+Before installing, make sure you have a postgresql running in localhost:5432
 
 
 To build the examples, run in this directory:
