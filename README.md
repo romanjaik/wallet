@@ -1,6 +1,6 @@
 # Project WalletServergRPC
 
-Thhe are two parts - a wallet server and a wallet client. The wallet server will keep track of a users monetary balance in the system. The client will emulate users depositing and withdrawing funds.
+The are two parts - a wallet server and a wallet client. The wallet server will keep track of a users monetary balance in the system. The client will emulate users depositing and withdrawing funds.
 
 Technologies used in this project:
 * Java
