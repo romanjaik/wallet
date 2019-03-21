@@ -11,7 +11,9 @@ Technologies used in this project:
 * JUnit
 * SLF4J
 
-Before installing, make sure you have a postgresql running in localhost:5432
+Project used a postgresql and running in localhost:5432
+Username: postgres
+Password: postgres
 
 
 To build the examples, run in this directory:
