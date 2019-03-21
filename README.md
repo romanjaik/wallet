@@ -11,7 +11,7 @@ Technologies used in this project:
 * JUnit
 * SLF4J
 
-Project used a postgresql and running in localhost:5432
+Project used database postgres and running in localhost:5432
 Username: postgres
 Password: postgres
 
